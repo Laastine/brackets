@@ -24,7 +24,6 @@ class Matches extends React.Component<any, any> {
   }
 
   render() {
-    console.log('SATTE', this.state.matches)
     return <div>
       {this.state.matches.map((match: [string, string], idx: number) => <Match
         key={`${match[0]}-${match[0]}-${idx}`} opponents={match}/>)}

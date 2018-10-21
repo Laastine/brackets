@@ -1,7 +1,7 @@
 import * as bodyParser from 'body-parser'
 import * as express from 'express'
-import staticAssetRouter from './routes/staticAssetRouter'
 import apiRouter from './routes/apiRouter'
+import staticAssetRouter from './routes/staticAssetRouter'
 
 class Server {
   public appServer: express.Application
