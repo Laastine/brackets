@@ -1,9 +1,9 @@
-import Server from './server';
+import Server from './server'
 
-const PORT = 4000;
+const PORT = 4000
 
-const server = new Server();
-server.start(PORT);
+const server = new Server()
+server.start(PORT)
 
 // tslint:disable: no-console
-console.log(`Server listening on port ${PORT}`);
+console.log(`Server listening on port ${PORT}`)
