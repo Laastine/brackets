@@ -6,7 +6,7 @@ import staticAssetRouter from './routes/staticAssetRouter'
 class Server {
   public appServer: express.Application
 
-  constructor() {
+  public constructor() {
     this.appServer = express()
     this.config()
     this.routes()

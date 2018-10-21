@@ -12,7 +12,7 @@
     "build": "npm run init-build-dir && node tsconfig && browserify --entry client/app.tsx -p tsify -o .generated/bundle.js",
     "build-css": "mkdir -p .generated && cat client/styles/*.css > .generated/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tslint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts' 'client/**/*.ts*' --fix",
     "watch": "npm run watch-js & npm run watch-css & npm run watch-server",
     "watch-css": "watch \"npm run build-css\" client/styles/",
     "watch-js": "npm run init-build-dir && node tsconfig && watchify --entry client/app.tsx -p tsify -o .generated/bundle.js",

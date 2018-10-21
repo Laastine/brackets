@@ -60,7 +60,31 @@
     "no-trailing-whitespace": true,
     "no-null-keyword": true,
     "prefer-const": true,
-    "jsdoc-format": true
+    "jsdoc-format": true,
+    "triple-equals": true,
+    "no-eval": true,
+    "ban": true,
+    "no-invalid-this": true,
+    "forin": true,
+    "no-unused-expression": true,
+    "no-parameter-reassignment": true,
+    "binary-expression-operand-order": true,
+    "radix": true,
+    "no-duplicate-variable": true,
+    "no-switch-case-fall-through": true,
+    "no-consecutive-blank-lines": true,
+    "no-empty": true,
+    "no-duplicate-imports": true,
+    "no-duplicate-super": true,
+    "no-arg": true,
+    "no-empty-interface": true,
+    "no-misused-new": true,
+    "trailing-comma": false,
+    "no-shadowed-variable": true,
+    "no-var-requires": true,
+    "prefer-function-over-method": true,
+    "prefer-template": true
   },
-  "rulesDirectory": []
+  "rulesDirectory": [
+  ]
 }
