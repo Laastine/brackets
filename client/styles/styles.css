@@ -25,3 +25,10 @@ body {
     height: 100%;
     position: relative;
 }
+
+.match-up {
+    border: 1px dimgray solid;
+    border-radius: 4px;
+    margin: 10px;
+    width: 150px;
+}

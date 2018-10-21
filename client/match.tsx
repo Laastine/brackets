@@ -1,5 +1,9 @@
 import * as React from 'react'
 
-export interface HelloProps { val: string }
+export interface Matchers {
+  opponents: [string, string]
+}
 
-export const Hello = (props: HelloProps) => <h1>Hello {props.val}</h1>
+export const Match = (props: Matchers) => <div className='match-up'>
+  <div>{props.opponents[0]} vs {props.opponents[1]}</div>
+</div>
