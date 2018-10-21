@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./.generated/",
+    "outDir": ".generated",
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
@@ -8,6 +8,6 @@
     "jsx": "react"
   },
   "include": [
-    "./src/**/*"
+    "./client/*.tsx"
   ]
 }
