@@ -10,9 +10,12 @@
   "scripts": {
     "init-build-dir": "mkdir -p .generated",
     "build": "npm run init-build-dir && node tsconfig && browserify --entry client/app.tsx -p tsify -o .generated/bundle.js",
-    "server": "tsc -w -p . & supervisor --quiet --ignore node_modules --watch .generated .generated/index.js",
+    "build-css": "mkdir -p .generated && cat client/styles/*.css > .generated/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm run init-build-dir && node tsconfig && watchify --entry client/app.tsx -p tsify -o .generated/bundle.js"
+    "watch": "npm run watch-js & npm run watch-css & npm run watch-server",
+    "watch-css": "watch \"npm run build-css\" client/styles/",
+    "watch-js": "npm run init-build-dir && node tsconfig && watchify --entry client/app.tsx -p tsify -o .generated/bundle.js",
+    "watch-server": "tsc -w -p . & supervisor --quiet --ignore node_modules --watch .generated .generated/index.js"
   },
   "author": "Mikko Kaistinen",
   "license": "MIT",
@@ -22,7 +25,7 @@
     "@types/node": "10.12.0",
     "@types/react": "16.4.18",
     "@types/react-dom": "16.0.9",
-    "body-parser": "1.17.0",
+    "body-parser": "1.18.3",
     "express": "4.16.0",
     "react": "16.5.2",
     "react-dom": "16.5.2"
@@ -34,6 +37,7 @@
     "tsify": "4.0.0",
     "tslint": "5.11.0",
     "typescript": "3.1.3",
+    "watch": "1.0.2",
     "watchify": "3.11.0"
   }
 }

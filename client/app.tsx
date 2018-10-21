@@ -3,4 +3,4 @@ import * as ReactDOM from 'react-dom'
 
 import {Hello} from './hello'
 
-ReactDOM.render(<Hello val={"world"}/>, document.getElementById('app'))
+ReactDOM.render(<Hello val={"world"}/>, document.getElementById('app-root'))
