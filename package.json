@@ -11,7 +11,8 @@
     "init-build-dir": "mkdir -p .generated",
     "build": "npm run init-build-dir && node tsconfig && browserify --entry client/app.tsx -p tsify -o .generated/bundle.js",
     "server": "tsc -w -p . & supervisor --quiet --ignore node_modules --watch .generated .generated/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run init-build-dir && node tsconfig && watchify --entry client/app.tsx -p tsify -o .generated/bundle.js"
   },
   "author": "Mikko Kaistinen",
   "license": "MIT",
