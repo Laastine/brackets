@@ -1,6 +1,7 @@
 import * as bodyParser from 'body-parser'
 import * as express from 'express'
 import staticAssetRouter from './routes/staticAssetRouter'
+import apiRouter from './routes/apiRouter'
 
 class Server {
   public appServer: express.Application
@@ -18,6 +19,7 @@ class Server {
 
   public routes(): void {
     this.appServer.use(staticAssetRouter)
+    this.appServer.use('/api', apiRouter)
   }
 
   public start(port: number): void {
