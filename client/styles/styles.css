@@ -29,6 +29,7 @@ body {
 .match-up {
     border: 1px dimgray solid;
     border-radius: 4px;
-    margin: 10px;
+    margin: 15px;
+    padding: 5px;
     width: 150px;
 }
